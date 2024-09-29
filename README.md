@@ -23,6 +23,7 @@ kubectl apply -f .
 
 ### 3. Configuration
 Ensure the following environment variables are set correctly in your Kubernetes manifests:
+
 __MYSQL_ROOT_PASSWORD__: Root password for MySQL
 
 __MYSQL_DATABASE__: Database name

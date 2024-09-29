@@ -15,7 +15,7 @@ Eks-Project is a Kubernetes-based project designed to deploy a WordPress applica
 git clone https://github.com/noalotan/Eks-Project.git
 cd Eks-Project
 ```
-### 2. Deploy the mysql Database and the WordPress:
+### 2. Deploy the mysql Database and the WordPress App:
 
 ```sh
 kubectl apply -f .

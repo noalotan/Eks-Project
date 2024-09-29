@@ -15,20 +15,13 @@ Eks-Project is a Kubernetes-based project designed to deploy a WordPress applica
 git clone https://github.com/noalotan/Eks-Project.git
 cd Eks-Project
 ```
-### 2. Deploy the MySQL Database
-Create the StatefulSet, PVC, and Service for the MySQL database:
+### 2. Deploy the mysql Database and the WordPress:
+
 ```sh
-kubectl apply -f mysql-statefulset.yml
-kubectl apply -f mysql-pvc.yml
-kubectl apply -f mysql-service.yml
+kubectl apply -f .
 ```
-### 3. Deploy WordPress
-Create the Deployment and Service for WordPress:
-```sh
-kubectl apply -f wordpress-deployment.yml
-kubectl apply -f wordpress-service.yml
-```
-### 4. Configuration
+
+### 3. Configuration
 Ensure the following environment variables are set correctly in your Kubernetes manifests:
 __MYSQL_ROOT_PASSWORD__: Root password for MySQL
 
@@ -46,7 +39,7 @@ __WORDPRESS_DB_PASSWORD__: Password for the WordPress database user
 
 __WORDPRESS_DB_NAME__: WordPress database name
 
-### 5. Verify Deployment
+### 4. Verify Deployment
 Check the StatefulSet:
 ```sh
 kubectl get statefulsets
@@ -61,8 +54,4 @@ Check the Service:
 ```sh
 kubectl get svc
 ```
-
-__Access WordPress:__
-Open your browser and navigate to http://<your-cluster-ip>:8080
-
 
